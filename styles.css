@@ -241,17 +241,10 @@ h2 {
     .nav-links.active {
       display: flex;
     }
-    .service-price {
-    width: 80px;    
-   
-    
-    
-}
-.service-container {
-    width: 80px;
-    
-    
-}
+   .service-card {
+       width: 200px;
+   }   
   }
+
 
 
