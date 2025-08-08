@@ -30,7 +30,7 @@ header {
 }
 .menu-toggle {
     display: none;
-    font-size: 28px;
+    font-size: 20px;
     background-color: gray;
     border: gray;
     cursor: pointer;
@@ -219,7 +219,7 @@ h2 {
 }
 @media (max-width: 768px) {
     .menu-toggle {
-      width: 80px;
+      width: 150px;
       display: block;
       border: gray;
       border-radius: 5px;
@@ -241,10 +241,9 @@ h2 {
     .nav-links.active {
       display: flex;
     }
-   .service-card {
-       width: 200px;
-   }   
+    
   }
+
 
 
 
