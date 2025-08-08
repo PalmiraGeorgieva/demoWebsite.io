@@ -219,7 +219,7 @@ h2 {
 }
 @media (max-width: 768px) {
     .menu-toggle {
-      width: 150px;
+      width: 100px;
       display: block;
       border: gray;
       border-radius: 5px;
@@ -241,8 +241,21 @@ h2 {
     .nav-links.active {
       display: flex;
     }
-    
+    .service-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 30%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service-card:hover {
+    transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
   }
+
 
 
 
