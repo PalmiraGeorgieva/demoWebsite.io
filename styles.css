@@ -298,14 +298,11 @@ nav ul li a {
 
 #comment-input {
  width: 100%;
-  min-height: 80px;
-  padding: 10px;
-  font-size: 14px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  resize: vertical;
+  max-width: 500px; 
+  padding: 8px;
+  font-size: 1rem;
   box-sizing: border-box;
-  margin-bottom: 10px;
+  resize: vertical; 
 }
 
 #comment-form button {
@@ -528,6 +525,7 @@ h2 {
   font-size: 1.2rem;
 }
   }
+
 
 
 
