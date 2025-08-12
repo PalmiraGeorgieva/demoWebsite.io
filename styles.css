@@ -192,19 +192,15 @@ nav ul li a {
   color: #555;
 }
 
-
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
-  animation: fadeInUp 0.8s forwards;
-  animation-delay: 0.3s;
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 .price {
     text-align: center;
@@ -525,6 +521,7 @@ h2 {
   font-size: 1.2rem;
 }
   }
+
 
 
 
