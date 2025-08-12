@@ -494,7 +494,7 @@ h2 {
       flex-direction: column;
       color: black;
       width: 100%;
-      background-color: gray;
+      background-color: #00aaff;
       border-radius: 5px;
       position: absolute;
       top: 70px;
@@ -517,6 +517,7 @@ h2 {
     max-width: 400px;              
   }
   }
+
 
 
 
