@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   </head>
   <body>
+    
     <header id="header">
       <div class="logo">
         <img src="logo.images.jpg" alt="Net-Sar.logo" width="90" id="header-img">
@@ -25,77 +27,143 @@
       </nav>
     </header>
 
-    <section id="home">
-      <div id="welcome-container">
-        <h1>Добре дошли в Net-Sar BG</h1>
-        <p>Вашият доставчик на интернет и телевизия</p>
-        <a href="#services" class="cta-button">Разгледайте услугите</a>
+    <section id="home" class="fade-in">
+      <div id="wifi-background">
+      <div class="wifi-wave"></div>
+     <div class="wifi-wave"></div>
+     <div class="wifi-wave"></div>
+    </div>
+      <div id="welcome-container" class="fade-in">
+        <h1 id="animated-text">Добре дошли в Net-Sar BG</h1>
+        <p id="animated-subtext">Вашият доставчик на интернет и телевизия</p>
+        <a href="#services" class="cta-button">Виж повече</a>
       </div>
     </section>
-    <section id="about-us">
-      <div class="about-us-container">
+    <section id="about-us" class="fade-in">
+      <div class="about-us-container fade-in">
         <h2>За нас</h2>
-      <p>Фирма НЕТ - САР СИСТЕМС ЕООД на латиница "NET - SAR SYSTEMS" с ЕИК/ПИК 201977563 е основана на 21 Март 2012 година с правна форма "Еднолично дружество с ограничена отговорност" или на кратко "ЕООД". Седалището на компанията се намира в с. Житница.</p>
+      <p>Фирма НЕТ - САР БГ ЕООД на латиница "NET - SAR SYSTEMS" с ЕИК/ПИК 201977563 е основана на 21 Март 2012 година с правна форма "Еднолично дружество с ограничена отговорност" или на кратко "ЕООД". Седалището на компанията се намира в с. Житница.</p>
       <p>Предоставяне на услугата интернет на крайни и бизнес клиенти. 
         Предоставяне на пакетни форми-телевизия, интернет и др. 
         Търговия с компютърна техника. Външна и вътрешна търговия. </p>
     </div>
     </section>
-    <div class="service-price">
-    <section id="services">
-      <h2>Нашите Услуги:</h2>
-      <div class="service-container">
-        <div class="service-card">
-          <i class="fas fa-wifi"></i>
-          <h3>Домашен интернет</h3>
-          <p>Бърза и надеждна връзка за целия дом.</p>
-        </div>
-        <div class="service-card">
-          <i class="fas fa-tv"></i>
-          <h3>Телевизионни пакети</h3>
-          <p>Голямо разнообразие от канали и пакети.</p>
-        </div>
-        <div class="service-card">
-          <i class="fas fa-headset"></i>
-          <h3>Поддръжка и обслужване</h3>
-          <p>Качество и бързина в обслужването на клиентите.</p>
-        </div>
-      </div>
-    </section>
+    <div class="service-price fade-in">
+    <section id="services" class="fade-in">
+  <h2>Нашите Услуги:</h2>
+    
+  <div class="service-container">
+    <!-- Сателитна чиния (inline SVG за по-лесна анимация) -->
+    <div class="service-card fade-in">
+      <div class="svg-wrap">
+        <!-- Прост SVG на сателитна чиния със signal circles -->
+        <svg class="satellite-svg" viewBox="0 0 200 160" width="140" aria-hidden="true">
+          <!-- Dish (чиния) -->
+          <g class="dish" transform="translate(40,40)">
+            <path class="dish-plate" d="M0,60 C30,10 90,10 120,60 Z" fill="#e6eef9" stroke="#b7d0ff" stroke-width="3"/>
+            <rect x="55" y="60" width="6" height="30" rx="3" fill="#a3b8d9"/>
+            <circle cx="58" cy="95" r="6" fill="#6b8fbf"/>
+          </g>
+          <!-- Antenna / tower -->
+          <g class="tower" transform="translate(140,30)">
+            <rect x="0" y="40" width="6" height="60" rx="2" fill="#9fb2d6" />
+            <circle cx="3" cy="30" r="10" fill="#dbeffe" stroke="#b7d0ff" stroke-width="2"/>
+          </g>
 
-    <section id="pricing">
-      <h2>Цени:</h2>
-      <div class="pricing-table">
-        <div class="pricing-option">
-          <h3>Базов пакет</h3>
-          <p>Цена: 20 лв/месец</p>
-          <p>Интернет до 100 Mbps</p>
-        </div>
-        <div class="pricing-option">
-          <h3>Стандартен пакет</h3>
-          <p>Цена: 40 лв/месец</p>
-          <p>Интернет до 200 Mbps, TV пакет</p>
-        </div>
-        <div class="pricing-option">
-          <h3>Премиум пакет</h3>
-          <p>Цена: 60 лв/месец</p>
-          <p>Интернет до 500 Mbps, TV + Допълнителни услуги</p>
-        </div>
+          <!-- Signal waves (initially hidden / scaled) -->
+          <g class="waves" transform="translate(70,50)">
+            <circle class="wave w1" r="6" fill="none" stroke="#6b8fbf" stroke-width="2" opacity="0.9"/>
+            <circle class="wave w2" r="16" fill="none" stroke="#6b8fbf" stroke-width="2" opacity="0.6"/>
+            <circle class="wave w3" r="28" fill="none" stroke="#6b8fbf" stroke-width="2" opacity="0.3"/>
+          </g>
+        </svg>
       </div>
-    </section></div>
 
-    <section id="contact">
+      <h3>Оптичен интернет</h3>
+      <p>Високоскоростна връзка за отдалечени райони.</p>
+    </div>
+
+    <!-- Антена (пример втора карта) -->
+    <div class="service-card fade-in">
+      <div class="svg-wrap">
+        <svg class="antenna-svg" viewBox="0 0 160 160" width="120" aria-hidden="true">
+          <g transform="translate(20,10)">
+            <path class="antenna-arc" d="M40 30 C60 10 100 10 120 30" stroke="#6b8fbf" stroke-width="4" fill="none" stroke-linecap="round"/>
+            <rect x="78" y="30" width="6" height="70" rx="3" fill="#9fb2d6"/>
+            <circle cx="81" cy="25" r="8" fill="#dbeffe" stroke="#b7d0ff" stroke-width="2"/>
+          </g>
+          <g class="antenna-waves" transform="translate(80,20)">
+            <circle class="a1" r="6" fill="none" stroke="#6b8fbf" stroke-width="2" opacity="0.9"/>
+            <circle class="a2" r="14" fill="none" stroke="#6b8fbf" stroke-width="2" opacity="0.5"/>
+          </g>
+        </svg>
+      </div>
+
+      <h3>Телевизионни пакети</h3>
+      <p>Голямо разнообразие от канали и пакети.</p>
+    </div>
+
+    <!-- Трета карта - поддръжка (може да е икона или друг SVG) -->
+    <div class="service-card fade-in">
+      <i class="fas fa-headset animated-icon" aria-hidden="true"></i>
+      <h3>Поддръжка и обслужване</h3>
+      <p>Качество и бързина в обслужването на клиентите.</p>
+    </div>
+  </div>
+</section></div>
+<div class="price fade-in">
+   <section id="pricing" class="fade-in">
+  <h2>Цени <i class="fas fa-euro-sign money-icon"></i></h2>
+  <table class="pricing-table">
+    <thead>
+      <tr>
+        <th>Услуга</th>
+        <th>Описание</th>
+        <th>Цена <i class="fas fa-euro-sign money-icon"></i></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Интернет ТВ пакет</td>
+        <td>Основен пакет с 50+ канала</td>
+        <td>20 <i class="fas fa-euro-sign money-icon"></i>/месец</td>
+      </tr>
+      <tr>
+        <td>Разширен пакет</td>
+        <td>100+ канала, HD качество</td>
+        <td>35 <i class="fas fa-euro-sign money-icon"></i>/месец</td>
+      </tr>
+      <tr>
+        <td>Допълнителни услуги</td>
+        <td>Запис на програми, архив</td>
+        <td>+5 <i class="fas fa-euro-sign money-icon"></i>/месец</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="pricing-note">Всички цени са с включен ДДС. За индивидуални оферти, моля свържете се с нас.</p>
+</section></div>
+<section id="contact" class="fade-in">
       <h2>Контакти</h2>
-      <div class="contact-container">
+      <div id="contact-info">
+     <img id="contact-img" src="internet-tv.jpg" alt="contact image">
+    </div>
+      <div class="contact-container fade-in">
       <p>Управител: ГЕОРГИ ЙОРДАНОВ ГЕОРГИЕВ</p>  
       <p>Email: info@netsarsystems.bg</p>
       <p>Телефон: +359 88x xxx xxx</p>
-      <form>
-        <input type="text" placeholder="Вашето име" required>
-        <input type="email" placeholder="Email" required>
-        <textarea placeholder="Вашето съобщение" required></textarea>
-        <input type="submit" id="submit" value="Изпрати">
-      </form></div>
+      <div class="contact-container">
+          <div class="social-icons">
+          <a href="https://www.facebook.com/profile.php?id=100015561576359" target="_blank"><i class="fab fa-facebook"></i>Facebook</a>
+          <a href="mailto:info@netsarsystems.bg" target="_blank"><i class="fas fa-envelope"></i>Send a mail</a>
+           </div></div>   
+      <div id="comments-section">
+     <h3>Отзиви</h3>
+     <ul id="comments-list"></ul>
+      <form id="comment-form">
+      <textarea id="comment-input" placeholder="Напишете вашия коментар..." required></textarea>
+      <button type="submit">Изпрати</button>
+     </form>
+     </div>
     </section>
 
     <footer>
