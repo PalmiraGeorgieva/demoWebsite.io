@@ -133,6 +133,7 @@ nav ul li a {
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     width: 30%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: linear-gradient(to bottom right, #ffffff, #f0f8ff);
 }
 .service-card:hover {
     transform: translateY(-5px);
@@ -144,24 +145,77 @@ nav ul li a {
     color: #00aaff;
 }
 
-.pricing-table {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 50px;
-    
-}
-.pricing-option:hover {
-    transform: translateY(-5px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.money-icon {
+  color: #2a9d8f; /* приятен зелен оттенък */
+  margin-left: 5px;
+  animation: pulse 2s infinite ease-in-out;
+  vertical-align: middle;
 }
 
-.pricing-option {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    width: 30%;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Пулсираща анимация */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+}
+
+/* Добавяне стилове за таблицата */
+.pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.pricing-table th,
+.pricing-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+.pricing-table thead {
+  background-color: #f5f5f5;
+}
+
+.pricing-table tbody tr:hover {
+  background-color: #eef6ff;
+}
+
+.pricing-note {
+  margin-top: 1rem;
+  font-style: italic;
+  color: #555;
+}
+
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.price {
+    text-align: center;
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    
 }
 .contact-container {
     display: flex;
@@ -169,35 +223,111 @@ nav ul li a {
     align-items: center;
   }
 #contact {
-    padding: 40px;
-    background: linear-gradient(to bottom, #0967b9, #d5e8e9 );
-  text-align: center; 
-  border-radius: 8px;  
-}
-#contact form {
-    max-width: 500px;
-   width: 100%;
-   margin-bottom: 20px;
-    gap: 15px; /* Разстояние между полетата */
-}
-form input, form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-form input[type="submit"] {
-    margin-top: 15px;
-    padding: 10px 20px;
-    background-color: #007;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+#contact h2, #comments-section h3 {
+  color: #333;
+  margin-bottom: 15px;
+  text-align: center;
 }
 
+#contact-info {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#contact-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.contact-container p {
+  font-size: 16px;
+  margin: 5px 0;
+  color: #555;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 15px;
+  text-decoration: none;
+  color: #3b5998; /* Facebook blue */
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #1d2a56;
+}
+
+#comments-section {
+  margin-top: 30px;
+}
+
+#comments-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 15px;
+}
+
+#comments-list li {
+  background: #e2e2e2;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  color: #222;
+  word-wrap: break-word;
+}
+
+#comment-form textarea {
+  width: 100%;
+  min-height: 80px;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  resize: vertical;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+#comment-form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#comment-form button:hover {
+  background-color: #0056b3;
+}
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.fade-in-comment {
+  animation: fadeInScale 0.4s ease forwards;
+}
 footer {
     background-color: #000;
     color: white;
@@ -216,6 +346,138 @@ h2 {
     background-color: #fff;
     border-radius: 8px;
 
+}
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Създаваме центриране и размер на svg контейнера */
+.svg-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+/* Леко люлеене на чинията (група .dish) */
+.satellite-svg .dish {
+  transform-origin: 58px 60px; /* център на въртене */
+  animation: dish-wobble 4s ease-in-out infinite;
+}
+@keyframes dish-wobble {
+  0%,100% { transform: rotate(0deg); }
+  30% { transform: rotate(4deg); }
+  60% { transform: rotate(-3deg); }
+}
+
+/* Леко плаващо движение на цялото SVG за по-жив ефект */
+.satellite-svg {
+  animation: svg-float 6s ease-in-out infinite;
+}
+@keyframes svg-float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* Радиовълните (scale + fade) — стартират при .playing клас */
+.waves .wave {
+  transform-origin: 0 0;
+  transition: opacity 0.3s;
+  opacity: 0;
+  stroke-dasharray: 4 4;
+}
+.waves.playing .w1,
+.waves.playing .w2,
+.waves.playing .w3 {
+  animation: wave-pulse 1.8s ease-out infinite;
+  opacity: 1;
+}
+.waves.playing .w2 { animation-delay: 0.25s; }
+.waves.playing .w3 { animation-delay: 0.5s; }
+
+@keyframes wave-pulse {
+  0% { transform: scale(0.2); opacity: 0.9; stroke-width:2; }
+  60% { transform: scale(1.1); opacity: 0.4; stroke-width:1.5; }
+  100% { transform: scale(1.7); opacity: 0; stroke-width:1; }
+}
+
+/* Антена - леко въртене на връх и вълни */
+.antenna-svg .antenna-arc { transform-origin: 90px 30px; animation: arc-wobble 5s ease-in-out infinite; }
+@keyframes arc-wobble {
+  0%,100%{ transform: rotate(0deg); }
+  40%{ transform: rotate(3deg); }
+  70%{ transform: rotate(-2deg); }
+}
+.antenna-waves .a1,
+.antenna-waves .a2 {
+  opacity: 0;
+}
+.antenna-waves.playing .a1,
+.antenna-waves.playing .a2 {
+  animation: wave-pulse 1.6s ease-out infinite;
+  opacity: 1;
+}
+#wifi-background {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  height: 300px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.wifi-wave {
+  position: absolute;
+  border: 2px solid #00aaff;
+  border-radius: 50%;
+  opacity: 0.6;
+  animation: pulse 3s infinite;
+}
+
+.wifi-wave:nth-child(1) {
+  width: 100px;
+  height: 100px;
+  top: 100px;
+  left: 100px;
+  animation-delay: 0s;
+}
+
+.wifi-wave:nth-child(2) {
+  width: 140px;
+  height: 140px;
+  top: 80px;
+  left: 80px;
+  animation-delay: 1s;
+}
+
+.wifi-wave:nth-child(3) {
+  width: 180px;
+  height: 180px;
+  top: 60px;
+  left: 60px;
+  animation-delay: 2s;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.7);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(0.7);
+    opacity: 0.6;
+  }
 }
 @media (max-width: 768px) {
     .menu-toggle {
@@ -254,6 +516,8 @@ h2 {
     max-width: 400px;              
   }
   }
+
+
 
 
 
