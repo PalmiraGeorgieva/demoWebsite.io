@@ -31,8 +31,8 @@ header {
 .menu-toggle {
     display: none;
     font-size: 20px;
-    background-color: gray;
-    border: gray;
+    background-color: #00aaff;
+    border: white;
     cursor: pointer;
 }
 .navbar {
@@ -484,7 +484,8 @@ h2 {
       width: 40px;
       height: 40px;
       display: block;
-      border: gray;
+      background-color: #00aaff;
+      border: white;
       border-radius: 5px;
     }
   
@@ -516,6 +517,7 @@ h2 {
     max-width: 400px;              
   }
   }
+
 
 
 
