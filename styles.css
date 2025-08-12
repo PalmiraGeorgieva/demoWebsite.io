@@ -296,7 +296,7 @@ nav ul li a {
   margin-top: 10px; /* ако искаш допълнително разстояние над формата */
 }
 
-#comment-form textarea {
+#comment-input {
  width: 100%;
   min-height: 80px;
   padding: 10px;
@@ -528,6 +528,7 @@ h2 {
   font-size: 1.2rem;
 }
   }
+
 
 
 
