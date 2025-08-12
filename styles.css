@@ -288,31 +288,36 @@ nav ul li a {
   word-wrap: break-word;
 }
 
+#comment-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* центрира бутонa хоризонтално */
+  gap: 8px; /* разстояние между textarea и бутон */
+  margin-top: 10px; /* ако искаш допълнително разстояние над формата */
+}
+
 #comment-form textarea {
   width: 100%;
-  min-height: 80px;
-  padding: 10px;
-  font-size: 14px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  resize: vertical;
+  max-width: 500px; /* ограничава ширината */
+  padding: 8px;
+  font-size: 1rem;
   box-sizing: border-box;
-  margin-bottom: 10px;
+  resize: vertical; /* да може да се променя височината */
 }
 
 #comment-form button {
- background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 10px 25px;
-  font-size: 16px;
-  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
   cursor: pointer;
+  border: none;
+  background-color: #2a9d8f;
+  color: white;
+  border-radius: 4px;
   transition: background-color 0.3s ease;
 }
 
 #comment-form button:hover {
-  background-color: #0056b3;
+  background-color: #237d75;
 }
 @keyframes fadeInScale {
   0% {
@@ -516,7 +521,11 @@ h2 {
     width: 90%;                    
     max-width: 400px;              
   }
+    .social-icons a {
+  font-size: 1.2rem;
+}
   }
+
 
 
 
