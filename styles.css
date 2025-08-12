@@ -297,12 +297,15 @@ nav ul li a {
 }
 
 #comment-form textarea {
-  width: 100%;
-  max-width: 500px; /* ограничава ширината */
-  padding: 8px;
-  font-size: 1rem;
+ width: 100%;
+  min-height: 80px;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  resize: vertical;
   box-sizing: border-box;
-  resize: vertical; /* да може да се променя височината */
+  margin-bottom: 10px;
 }
 
 #comment-form button {
@@ -525,6 +528,7 @@ h2 {
   font-size: 1.2rem;
 }
   }
+
 
 
 
