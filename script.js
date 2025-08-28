@@ -115,3 +115,17 @@ commentForm.addEventListener('submit', function(e) {
   // Изчиства полето
   commentInput.value = '';
 });
+
+window.addEventListener("load", () => {
+    const preloader = document.getElementById("preloader");
+    const mainContent = document.getElementById("main-content");
+
+    setTimeout(() => {
+        preloader.style.opacity = "0";
+    
+    setTimeout(() => {
+        preloader.style.display = 'none';
+        mainContent.style.display = 'block';
+    }, 1000);
+    }, 2000);
+});
