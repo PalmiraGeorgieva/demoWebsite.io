@@ -9,8 +9,41 @@ body {
     background-color: #f4f4f4;
     color: #333;
 }
+#preloader { 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+#logo {
+    width: 200px;
+    animation: spinScale 2s infinite alternate;
+}
+ @keyframes spinScale {
+     0% {
+         transform: rotate(0deg) scale(1);
+     }
+     50% {
+         transform: rotate(180deg) scale(1.2);
+     }
+     100% {
+         transform: rotate(360deg) scale(1);
+     }
+ }
 
+#main-content {
+    display: none;
+}
 header {
+    
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -521,6 +554,7 @@ h2 {
   font-size: 1.2rem;
 }
   }
+
 
 
 
