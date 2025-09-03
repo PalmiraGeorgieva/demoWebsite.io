@@ -129,3 +129,24 @@ window.addEventListener("load", () => {
     }, 1000);
     }, 2000);
 });
+function centerWelcomeText() {
+     const homeSection = document.getElementById('home');
+  const welcomeContainer = document.getElementById('welcome-container');
+
+  // Вземаме височината на секцията
+  const homeHeight = homeSection.offsetHeight;
+  const contentHeight = welcomeContainer.offsetHeight;
+
+  // Изчисляваме горния margin, за да центрираме вертикално
+  const marginTop = Math.max((homeHeight - contentHeight) / 2, 20); // минимум 20px
+  welcomeContainer.style.marginTop = marginTop + 'px';
+}
+window.addEventListener('load', () => {
+  centerWelcomeText();
+  document.getElementById('main-content').style.display = 'block'; // показваме съдържанието след preloader
+  document.getElementById('preloader').style.opacity = '0';
+  setTimeout(() => { document.getElementById('preloader').style.display = 'none'; }, 1000);
+});
+
+// Центрираме при resize на прозореца
+window.addEventListener('resize', centerWelcomeText);
