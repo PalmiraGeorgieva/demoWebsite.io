@@ -95,6 +95,19 @@ nav ul li a {
     text-decoration: none;
     font-size: 18px;
 }
+#welcome-container {
+  max-width: 90%;         /* ограничаваме ширината, така че да не излиза извън екрана */
+  margin: 0 auto;         /* центрира текста хоризонтално */
+  padding: 0 1rem;        /* малко вътрешно отстояние */
+  box-sizing: border-box;  /* padding не увеличава ширината */
+}
+#welcome-container h1,
+#welcome-container p {
+  word-wrap: break-word;     
+  overflow-wrap: break-word; 
+  line-height: 1.4;          /* по-добра четливост */
+  text-align: center;        /* центриране на текста */
+}
 
 #home {
     background: url('home-bg.jpg') center/cover no-repeat;
@@ -539,6 +552,12 @@ h2 {
     .nav-links.active {
       display: flex;
     }
+    #welcome-container h1 {
+    font-size: 2rem;
+  }
+  #welcome-container p {
+    font-size: 1rem;
+  }
    .service-container,
   .pricing-table {
     flex-direction: column;       
@@ -554,6 +573,7 @@ h2 {
   font-size: 1.2rem;
 }
   }
+
 
 
 
