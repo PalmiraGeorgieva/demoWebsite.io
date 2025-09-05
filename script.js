@@ -43,31 +43,33 @@ const subtexts = [
   "Гарантираме надеждност и сигурност."
 ];
 
-let index = 0;
+
+   let index = 0;
 const mainText = document.getElementById('animated-text');
 const subText = document.getElementById('animated-subtext');
 
+// Генерираме всички span-ове веднъж
+mainText.innerHTML = texts.map(t => `<span>${t}</span>`).join('');
+subText.innerHTML = subtexts.map(t => `<span>${t}</span>`).join('');
+
+mainText.querySelector('span').classList.add('active');
+subText.querySelector('span').classList.add('active');
+
 function changeText() {
-  // fade out
-  mainText.style.opacity = 0;
-  subText.style.opacity = 0;
-  
-  setTimeout(() => {
-    // смени текстовете
-    mainText.textContent = texts[index];
-    subText.textContent = subtexts[index];
-    
-    // fade in
-    mainText.style.opacity = 1;
-    subText.style.opacity = 1;
-    
-    index++;
-    if (index >= texts.length) index = 0;
-  }, 500); // времето за fade out
+  const mainSpans = mainText.querySelectorAll('span');
+  const subSpans = subText.querySelectorAll('span');
+
+  mainSpans.forEach(s => s.classList.remove('active'));
+  subSpans.forEach(s => s.classList.remove('active'));
+
+  mainSpans[index].classList.add('active');
+  subSpans[index].classList.add('active');
+
+  index = (index + 1) % texts.length;
 }
 
-// Започни анимацията на всеки 4 секунди
 setInterval(changeText, 4000);
+
 
 // След това добавяме активирането на .waves.playing и .antenna-waves.playing
 
@@ -150,3 +152,4 @@ window.addEventListener('load', () => {
 
 // Центрираме при resize на прозореца
 window.addEventListener('resize', centerWelcomeText);
+
