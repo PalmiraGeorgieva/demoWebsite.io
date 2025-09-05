@@ -633,6 +633,22 @@ h2 {
     .nav-links.active {
       display: flex;
     }
+    #animated-text span,
+  #animated-subtext span {
+    position: static; 
+    display: block;
+    opacity: 1 !important; /* няма да се наслагват */
+    transform: none !important;
+  }
+
+  #welcome-container {
+    min-height: auto; /* позволява адаптивна височина */
+    padding: 0 10px;
+  }
+  
+  #animated-text {
+    margin-bottom: 0.5rem; /* разстояние между основен текст и подтекст */
+  }
     #welcome-container h1 {
     font-size: 2rem;
   }
@@ -654,6 +670,7 @@ h2 {
   font-size: 1.2rem;
 }
   }
+
 
 
 
