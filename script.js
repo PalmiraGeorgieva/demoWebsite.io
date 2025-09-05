@@ -36,39 +36,25 @@ const texts = [
   "Насладете се на безпроблемна връзка."
 ];
 
-const subtexts = [
-  "Ние предлагаме качествени услуги.",
-  "Стабилна и бърза връзка за дома и офиса.",
-  "Обслужване на клиентите 24/7.",
-  "Гарантираме надеждност и сигурност."
-];
 
 
    let index = 0;
 const mainText = document.getElementById('animated-text');
-const subText = document.getElementById('animated-subtext');
 
 // Генерираме всички span-ове веднъж
 mainText.innerHTML = texts.map(t => `<span>${t}</span>`).join('');
-subText.innerHTML = subtexts.map(t => `<span>${t}</span>`).join('');
-
 mainText.querySelector('span').classList.add('active');
-subText.querySelector('span').classList.add('active');
 
 function changeText() {
    mainText.style.transition = 'opacity 0.5s ease';
-  subText.style.transition = 'opacity 0.5s ease';
+ 
   mainText.style.opacity = 0;
-  subText.style.opacity = 0;
   
   setTimeout(() => {
     mainText.textContent = texts[index];
-    subText.textContent = subtexts[index];
-    
     // fade in
     mainText.style.opacity = 1;
-    subText.style.opacity = 1;
-    
+   
     index++;
     if (index >= texts.length) index = 0;
   }, 500);
@@ -172,5 +158,6 @@ function revealAbout() {
 
 window.addEventListener('scroll', revealAbout);
 revealAbout(); // проверка при зареждане
+
 
 
