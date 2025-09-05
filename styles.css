@@ -157,6 +157,8 @@ nav ul li a {
 .cta-button {
     background-color: #00aaff;
     padding: 10px 20px;
+    margin-left: auto;
+    margin-right: auto;
     text-decoration: none;
     border: solid white;
     color: white;
@@ -588,6 +590,7 @@ h2 {
   font-size: 1.2rem;
 }
   }
+
 
 
 
