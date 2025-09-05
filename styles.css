@@ -219,12 +219,17 @@ nav ul li a {
   opacity: 1;
   transform: translateY(0);
 }
+.about-us-container ul {
+    list-style: none; /* премахва основните точки */
+  padding-left: 0;  /* премахва отстоянието отляво */
+}
 
 /* Леко оцветяване на ключови думи */
 .about-us-container ul li::before {
   content: "• ";
   color: #00aaff; /* акцентен син цвят */
   font-weight: bold;
+ margin-right: 8px;
 }
 
 /* Лек hover ефект на редовете в списъка */
@@ -670,6 +675,7 @@ h2 {
   font-size: 1.2rem;
 }
   }
+
 
 
 
