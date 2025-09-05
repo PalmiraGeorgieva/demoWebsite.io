@@ -153,3 +153,18 @@ window.addEventListener('load', () => {
 // Центрираме при resize на прозореца
 window.addEventListener('resize', centerWelcomeText);
 
+const aboutContainer = document.querySelector('.about-us-container');
+
+function revealAbout() {
+  const top = aboutContainer.getBoundingClientRect().top;
+  const windowHeight = window.innerHeight;
+
+  if (top < windowHeight - 100) { // когато секцията е почти видима
+    aboutContainer.classList.add('visible');
+    window.removeEventListener('scroll', revealAbout);
+  }
+}
+
+window.addEventListener('scroll', revealAbout);
+revealAbout(); // проверка при зареждане
+
