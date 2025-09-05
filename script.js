@@ -54,12 +54,14 @@ function changeText() {
     mainText.textContent = texts[index];
     // fade in
     mainText.style.opacity = 1;
-   
     index++;
     if (index >= texts.length) index = 0;
   }, 500);
     
 setInterval(changeText, 4000);
+
+// Първоначален текст
+mainText.textContent = texts[0];
 
 
 // След това добавяме активирането на .waves.playing и .antenna-waves.playing
@@ -158,6 +160,7 @@ function revealAbout() {
 
 window.addEventListener('scroll', revealAbout);
 revealAbout(); // проверка при зареждане
+
 
 
 
