@@ -56,18 +56,23 @@ mainText.querySelector('span').classList.add('active');
 subText.querySelector('span').classList.add('active');
 
 function changeText() {
-  const mainSpans = mainText.querySelectorAll('span');
-  const subSpans = subText.querySelectorAll('span');
-
-  mainSpans.forEach(s => s.classList.remove('active'));
-  subSpans.forEach(s => s.classList.remove('active'));
-
-  mainSpans[index].classList.add('active');
-  subSpans[index].classList.add('active');
-
-  index = (index + 1) % texts.length;
-}
-
+   mainText.style.transition = 'opacity 0.5s ease';
+  subText.style.transition = 'opacity 0.5s ease';
+  mainText.style.opacity = 0;
+  subText.style.opacity = 0;
+  
+  setTimeout(() => {
+    mainText.textContent = texts[index];
+    subText.textContent = subtexts[index];
+    
+    // fade in
+    mainText.style.opacity = 1;
+    subText.style.opacity = 1;
+    
+    index++;
+    if (index >= texts.length) index = 0;
+  }, 500);
+    
 setInterval(changeText, 4000);
 
 
@@ -167,4 +172,5 @@ function revealAbout() {
 
 window.addEventListener('scroll', revealAbout);
 revealAbout(); // проверка при зареждане
+
 
