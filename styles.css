@@ -213,11 +213,11 @@ nav ul li a {
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 .video-container {
-    width: 450px;
-    height: 350px;
+    width: 420px;
     display: block;
     margin: auto;
-    border-radius: 8px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 .about-us-container video {
     width: 100%;
