@@ -212,10 +212,17 @@ nav ul li a {
   transform: translateY(20px);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
-.about-us-container video {
+.video-container {
+    width: 450;
+    height: 350;
     display: flex;
     align-item: center;
     justify-content: center;
+    border-radius: 8px;
+}
+.about-us-container video {
+    width: 100%;
+    height: auto;
 }
 
 /* Активен клас за видимост при скрол или зареждане */
