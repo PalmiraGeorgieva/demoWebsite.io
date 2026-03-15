@@ -34,29 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // CONTACT FORM ALERT
-document.querySelector('form').addEventListener('submit', function(e) {
-  e.preventDefault();
-  alert('Съобщението ви е изпратено успешно!');
-});
 
-// COMMENT FORM
-const commentForm = document.getElementById('comment-form');
-const commentInput = document.getElementById('comment-input');
-const commentsList = document.getElementById('comments-list');
-
-commentForm.addEventListener('submit', function(e) {
-  e.preventDefault();
-  
-  const commentText = commentInput.value.trim();
-  if (!commentText) return;
-
-  const li = document.createElement('li');
-  li.textContent = commentText;
-  li.classList.add('fade-in-comment');
-  
-  commentsList.appendChild(li);
-  commentInput.value = '';
-});
 
 // PRELOADER
 window.addEventListener("load", () => {
