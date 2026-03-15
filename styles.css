@@ -48,7 +48,7 @@ header {
   display: flex;
   justify-content: space-between;
     background-color: #fff;
-    color: blue;
+    color: #BBE5FC;
     padding: 10px 20px;
     text-align: center;
     z-index: 1000;
@@ -91,7 +91,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: #BBE5FC;
     text-decoration: none;
     font-size: 18px;
 }
