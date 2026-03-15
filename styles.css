@@ -215,14 +215,14 @@ nav ul li a {
 .video-container {
     width: 450px;
     height: 350px;
-    display: flex;
-    align-item: center;
-    justify-content: center;
+    display: block;
+    margin: auto;
     border-radius: 8px;
 }
 .about-us-container video {
     width: 100%;
     height: auto;
+    border-radius: 10px;
 }
 
 /* Активен клас за видимост при скрол или зареждане */
