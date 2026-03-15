@@ -420,10 +420,10 @@ nav ul li a {
     align-items: center;
   }
 #contact {
-  max-width: 800px;
+  width: 100%;
   margin: 40px auto;
   padding: 20px;
-  background: transperant;
+  background: #ddd;
   border-radius: 8px;
   font-family: Arial, sans-serif;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -451,7 +451,7 @@ transition: 0.3s;
 transform: scale(1.1);
 }
 #contact h2, #comments-section h3 {
-  color: #ffffff;
+  color: #333;
   margin-bottom: 15px;
   text-align: center;
 }
