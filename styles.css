@@ -621,6 +621,11 @@ h2 {
   #welcome-container p {
     font-size: 1rem;
   }
+    .video-container {
+        width: 320px;
+        height: 200px;
+        
+    }
    .service-container,
   .pricing-table {
     flex-direction: column;       
