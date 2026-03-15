@@ -402,56 +402,6 @@ nav ul li a {
   color: #1d2a56;
 }
 
-#comments-section {
-  margin-top: 30px;
-}
-
-#comments-list {
-  list-style: none;
-  padding-left: 0;
-  margin-bottom: 15px;
-}
-
-#comments-list li {
-  background: #e2e2e2;
-  padding: 10px 15px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  color: #222;
-  word-wrap: break-word;
-}
-
-#comment-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;  /* центрира бутонa хоризонтално */
-  gap: 8px; /* разстояние между textarea и бутон */
-  margin-top: 10px; /* ако искаш допълнително разстояние над формата */
-}
-
-#comment-input {
- width: 100%;
-  max-width: 500px; 
-  padding: 8px;
-  font-size: 1rem;
-  box-sizing: border-box;
-  resize: vertical; 
-}
-
-#comment-form button {
-  padding: 10px 20px;
-  font-size: 1rem;
-  cursor: pointer;
-  border: none;
-  background-color: #2a9d8f;
-  color: white;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
-}
-
-#comment-form button:hover {
-  background-color: #237d75;
-}
 @keyframes fadeInScale {
   0% {
     opacity: 0;
