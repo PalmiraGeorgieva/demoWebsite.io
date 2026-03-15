@@ -47,8 +47,8 @@ header {
   width: 100%;
   display: flex;
   justify-content: space-between;
-    background-color: #000;
-    color: white;
+    background-color: #fff;
+    color: blue;
     padding: 10px 20px;
     text-align: center;
     z-index: 1000;
@@ -368,6 +368,12 @@ nav ul li a {
 }
 #partners h2 {
     margin-bottom: 30px;
+}
+#partners a {
+    text-decoration: none;
+}
+#partner a:hover {
+    color: darkblue;
 }
 
 .logo-slider {
