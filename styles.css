@@ -213,8 +213,8 @@ nav ul li a {
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 .video-container {
-    width: 450;
-    height: 350;
+    width: 450px;
+    height: 350px;
     display: flex;
     align-item: center;
     justify-content: center;
