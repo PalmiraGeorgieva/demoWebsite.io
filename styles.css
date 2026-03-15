@@ -364,6 +364,7 @@ nav ul li a {
   text-align: center;
   background: #f5f5f5;
   margin: auto; 
+  border-radius: 10px;  
 }
 #partners h2 {
     margin-bottom: 30px;
