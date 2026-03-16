@@ -62,7 +62,7 @@ header {
     display: block;
     height: 50px;
     width: auto;
-    margin-bottom: 20px;
+    margin: auto;
 }
 .menu-toggle {
     display: none;
