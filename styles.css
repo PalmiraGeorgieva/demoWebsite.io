@@ -55,10 +55,12 @@ header {
 .logo {
     height: 50px;
   width: auto;
+    margin-bottom: 20px;
 }
 .logo img {
     height: 50px;
     width: auto;
+    margin-bottom: 20px;
 }
 .menu-toggle {
     display: none;
