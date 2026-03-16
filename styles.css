@@ -46,18 +46,20 @@ header {
     background-color: black;
     display: flex;
     flex-direction: column;
-    align-item: center;
+    align-items: center;
     gap: 15px;
     padding: 5px 20px;
     position: relative;
     height: 100px;
 }
 .logo {
-    height: 40px;
-  width: auto;
-    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
 }
 .logo img {
+    display: block;
     height: 40px;
     width: auto;
     margin-bottom: 20px;
@@ -73,21 +75,22 @@ header {
   background-color: #fff;
     display: flex;
     justify-content: space-between;
-    align-item: center;
+    align-items: center;
     padding: 15px 20px;
     border-radius: 40px;
-    margin-top: -5px;
+    margin-top: -10px;
     position: absolute;
-    bottom: -35px;
+    bottom: -25px;
     left: 50%;
     transform: translateX(-50%);
     width: 80%;
-    height: 50px;
+    min-height: 60px;
     z-index: 10;
 }
 .nav-links {
     list-style: none;
     display: flex;
+    align-items: center;
     gap: 30px;
     margin: 0;
     padding: 0;
@@ -95,7 +98,7 @@ header {
 
 nav ul li {
     display: inline;
-    margin-right: 20px;
+    margin-right: 0;
 }
 
 nav ul li a {
