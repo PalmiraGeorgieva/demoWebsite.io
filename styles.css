@@ -706,6 +706,7 @@ h2 {
     }
   
     .nav-links {
+        display: none;
       flex-direction: column;
       width: 100%;
       gap: 15px;
