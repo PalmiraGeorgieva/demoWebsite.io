@@ -695,12 +695,17 @@ h2 {
     .nav-links {
       display: none;
       flex-direction: column;
+       align-items: center; 
       width: 100%;
       background-color: #00aaff;
       border-radius: 5px;
       position: static;
       padding: 20px;
        margin-top: 10px; 
+    }
+
+    .nav-link a {
+        color: white;
     }
   
     .nav-links.active {
