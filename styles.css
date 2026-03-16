@@ -75,7 +75,7 @@ header {
     padding: 15px 20px;
     border-radius: 40px;
     position: absolute;
-    bottom: -35px;
+    bottom: -25px;
     left: 50%;
     transform: translateX(-50%);
     width: 80%;
