@@ -671,30 +671,49 @@ h2 {
   }
 }
 @media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+        height: auto;
+    }
     .menu-toggle {
       width: 60px;
       height: 40px;
       display: block;
       background-color: #00aaff;
-      border: white;
-      border-radius: 5px;
+      border: none;
+      border-radius: 40px;
+      cursor: pointer;
+       order: 1; 
+    }
+    .logo {
+        order: 2;
     }
   
     .nav-links {
       display: none;
       flex-direction: column;
-      color: black;
       width: 100%;
       background-color: #00aaff;
       border-radius: 5px;
-      position: absolute;
-      top: 70px;
-      left: 0;
+      position: static;
       padding: 20px;
+       margin-top: 10px; 
     }
   
     .nav-links.active {
       display: flex;
+    }
+
+    .nav-links.left {
+        order: 3;
+        
+    }
+    .nav-links.right {
+        order: 4;
+        margin-top: 0;
     }
   #welcome-container {
     flex-direction: column;
