@@ -43,15 +43,14 @@ body {
     display: none;
 }
 header {
-    
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-    background: white; 
-    color: #BBE5FC;
-    padding: 10px 20px;
-    text-align: center;
-    z-index: 1000;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-item: center;
+    gap: 15px;
+    padding: 5px 20px;
+    position: relative;
+    height: 100px;
 }
 .logo {
     height: 50px;
@@ -69,13 +68,19 @@ header {
     cursor: pointer;
 }
 .navbar {
-  padding: 10px 30px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: sticky;
-  top: 0;
-  z-index: 2;
+  background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-item: center;
+    padding: 15px 20px;
+    border-radius: 40px;
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 50px;
+    z-index: 10;
 }
 .nav-links {
     list-style: none;
@@ -91,7 +96,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #BBE5FC;
+    color: blue;
     text-decoration: none;
     font-size: 18px;
 }
