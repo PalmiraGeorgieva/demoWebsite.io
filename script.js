@@ -1,9 +1,11 @@
 // MENU TOGGLE
 const menuToggle = document.querySelector('.menu-toggle');
-const navLinks = document.querySelector('.nav-links');
+const navLinks = document.querySelectorAll('.nav-links');
 
 menuToggle.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
+  navLinks.forEach(link => {
+    link.classList.toggle('active');
+  });
 });
 
 // FADE-IN ELEMENTS ON SCROLL
