@@ -156,9 +156,9 @@ nav ul li a {
 }
 
 #home {
-  background-image: url("hero-image.jpg");
+  background-image: url("hero-desktop.png");
   background-size: cover;
-  background-position: center bottom;
+  background-position: center;
     color: white;
     text-align: center;
     padding: 20px;
