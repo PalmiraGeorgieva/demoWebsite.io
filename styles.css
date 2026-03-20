@@ -157,10 +157,9 @@ nav ul li a {
 
 #home {
   background: 
-    linear-gradient(to right, #000000cc, #00000000, #000000cc),
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("hero-image.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
+  background-size: cover;
   background-position: center;
     color: white;
     text-align: center;
