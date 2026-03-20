@@ -156,7 +156,12 @@ nav ul li a {
 }
 
 #home {
-    background: url('hero-image.jpg') center/cover no-repeat;
+  background: 
+    linear-gradient(to right, #000000cc, #00000000, #000000cc),
+    url("hero-image.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
     color: white;
     text-align: center;
     padding: 20px;
@@ -171,7 +176,8 @@ nav ul li a {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Полупрозрачен черен фон за подобряване на контраста */
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4); /* Полупрозрачен черен фон за подобряване на контраста */
     z-index: -1; /* Поставяме този слой под текста */
 }
 
