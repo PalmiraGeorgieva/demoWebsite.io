@@ -156,7 +156,7 @@ nav ul li a {
 }
 
 #home {
-    background: url('net-sar-systems.png') center/cover no-repeat;
+    background: url('hero-image.jpg') center/cover no-repeat;
     color: white;
     text-align: center;
     padding: 20px;
@@ -672,7 +672,7 @@ h2 {
 }
 @media (max-width: 768px) {
     #home {
-        background-image: url('hero-mobile.png');
+        background-image: url('hero-image.jpg');
         background-size: cover;
         background-position: center;
     }
