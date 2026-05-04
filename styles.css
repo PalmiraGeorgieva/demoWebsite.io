@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: Ariel, sans-serif;
+    font-family: Arial, sans-serif;
     background-color: #023783;
     color: #333;
 }
@@ -184,7 +184,6 @@ nav ul li a {
     margin-bottom: 20px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Лек сянка за по-добра четимост */
 }
-
 #home p {
     font-size: 1.5rem;
     margin-bottom: 20px;
@@ -206,67 +205,7 @@ nav ul li a {
 .cta-button:hover {
     background-color: #0088cc; /* Малка промяна при hover ефект */
 }
-.about-us-container {
-  padding: 40px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  max-width: 1100px;
-  margin: 40px auto;
-  line-height: 1.6;
-  font-size: 1.1rem;
-  position: relative;
-  overflow: hidden;
-}
 
-/* Fade-in за параграфите и списъка */
-.about-us-container p,
-.about-us-container ul li {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-.video-container {
-    width: 420px;
-    display: block;
-    margin: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-.about-us-container video {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    
-    margin-top: 30px;
-}
-
-/* Активен клас за видимост при скрол или зареждане */
-.about-us-container.visible p,
-.about-us-container.visible ul li {
-  opacity: 1;
-  transform: translateY(0);
-}
-.about-us-container ul {
-    list-style: none; /* премахва основните точки */
-  padding-left: 0;  /* премахва отстоянието отляво */
-}
-
-/* Леко оцветяване на ключови думи */
-.about-us-container ul li::before {
-  content: "• ";
-  color: #00aaff; /* акцентен син цвят */
-  font-weight: bold;
- margin-right: 8px;
-}
-
-/* Лек hover ефект на редовете в списъка */
-.about-us-container ul li:hover {
-  background-color: #f0f8ff;
-  border-radius: 4px;
-  padding-left: 5px;
-  transition: background-color 0.3s ease, padding-left 0.3s ease;
-}
 .service-price {
     padding: 40px;
     text-align: center;
@@ -323,35 +262,6 @@ nav ul li a {
     opacity: 0.7;
   }
 }
-
-/* Добавяне стилове за таблицата */
-.pricing-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 1rem;
-}
-
-.pricing-table th,
-.pricing-table td {
-  border: 1px solid #ccc;
-  padding: 10px;
-  text-align: left;
-}
-
-.pricing-table thead {
-  background-color: #f5f5f5;
-}
-
-.pricing-table tbody tr:hover {
-  background-color: #eef6ff;
-}
-
-.pricing-note {
-  margin-top: 1rem;
-  font-style: italic;
-  color: #555;
-}
-
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -362,17 +272,202 @@ nav ul li a {
   opacity: 1;
   transform: translateY(0);
 }
-.price {
-    text-align: center;
-    border-radius: 8px;
+.pricing-section,
+.about-section,
+.contact-section {
     max-width: 1100px;
-    margin: 40px auto;
-    padding: 20px;
-    background: #f9f9f9;
-    font-family: Arial, sans-serif;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    
+    margin: 50px auto;
+    padding: 40px 20px;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
+
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-title h2, .about-text h2 {
+    font-size: 2rem;
+    color: #111827;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #555;
+}
+
+/* Prices */
+.pricing-card {
+    overflow-x: auto;
+    border-radius: 14px;
+}
+
+.pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0;
+}
+
+.pricing-table th{
+    background: #111827;
+    color: #fff;
+    padding: 16px;
+    text-align: left;
+    border: none;
+}
+
+.pricing-table td {
+    padding: 16px;
+    border: none;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.pricing-table tbody tr:hover {
+    background: #eef6ff;
+}
+
+.pricing-table td strong {
+    display: block;
+    color: #111827;
+}
+
+.pricing-table td span {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* About */
+.about-us-container {
+    max-width: 1100px;
+    margin: 0 auto 35px;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 25px;
+    align-items: stretch;
+}
+
+.about-text, 
+.about-features {
+    background: #fff;
+    border-radius: 16px;
+}
+
+.about-text {
+    padding: 30px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.about-text p {
+    line-height: 1.7;
+    margin-bottom: 12px;
+    color: #444;
+}
+
+.about-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.feature-card {
+    background: #111827;
+    color: #fff;
+    padding: 22px;
+    border-radius: 16px;
+    transition: 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    background: #023783;
+}
+
+.feature-card span {
+    display: block;
+    margin-top: 8px; 
+}
+
+/* Video */
+.video-container {
+    width: 100%;
+    max-width: 850px;
+    height: auto;
+    margin: 30px auto 0;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+.video-container video {
+    width: 100%;
+    display: block;
+}
+
+/* Contact */
+.contact-wrapper {
+    dispaly: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 28px;
+    align-items: center;
+}
+
+#contact-img {
+    width: 100%;
+    border-radius: 18px;
+}
+
+.contact-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.contact-card {
+    background: #f8fafc;
+    padding: 22px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.contact-card i {
+    fond-size: 1.7rem;
+    color: #023783;
+    margin-bottom: 10px;
+}
+
+.contact-card h3 {
+    color: #111827;
+    margin-bottom: 8px;
+}
+
+.contact-card p {
+    color: #555;
+    line-height: 1.5;
+}
+
+.contact-btn {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 16px;
+    background: #023783;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 999px;
+    transition: 0.3s ease;
+}
+
+.contact-btn:hover {
+    background: #00aaff;
+    transform: translateY(-2px);
+}
+
+/* Partners */
 #partners {
   padding: 40px 20px;
   text-align: center;
@@ -435,20 +530,7 @@ nav ul li a {
   margin-top: 30px;
   color: #555;
 }
-.contact-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-#contact {
-  max-width: 1100px;
-  margin: 40px auto;
-  padding: 20px;
-  background: #fff;
-  border-radius: 8px;
-  font-family: Arial, sans-serif;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
+
 .call-button {
 position: fixed;
 bottom: 20px;
@@ -471,42 +553,7 @@ transition: 0.3s;
 .call-button:hover {
 transform: scale(1.1);
 }
-#contact h2, #comments-section h3 {
-  color: #333;
-  margin-bottom: 15px;
-  text-align: center;
-}
 
-#contact-info {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-#contact-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 6px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-.contact-container p {
-  font-size: 16px;
-  margin: 5px 0;
-  color: #555;
-}
-
-.social-icons a {
-  display: inline-block;
-  margin-right: 15px;
-  text-decoration: none;
-  color: #3b5998; /* Facebook blue */
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-.social-icons a:hover {
-  color: #1d2a56;
-}
 
 @keyframes fadeInScale {
   0% {
@@ -534,12 +581,6 @@ footer {
 h2 {
     text-align: center;
     color: #1f1c1cce;
-}
-.about-us-container {
-    padding: 40px;
-    background-color: #fff;
-    border-radius: 8px;
-
 }
 .fade-in {
   opacity: 0;
@@ -768,25 +809,41 @@ h2 {
   #welcome-container p {
     font-size: 1rem;
   }
-    .video-container {
-        width: 320px;
-        height: 200px;
-        
-    }
-   .service-container,
-  .pricing-table {
+
+   .service-container{
     flex-direction: column;       
     align-items: center;          
     gap: 20px;                     
   }
-    .service-card,
-  .pricing-option {
+    .service-card {
     width: 90%;                    
     max-width: 400px;              
   }
     .social-icons a {
   font-size: 1.2rem;
-}
+ }
+  .pricing-section,
+  .about-section,
+  .contact-section {
+    margin: 30px 12px;
+    padding: 28px 14px;
+  }
+
+  .about-us-container,
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .about-features,
+  .contact-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-table th,
+  .pricing-table td {
+    padding: 12px;
+    font-size: 0.9rem;
+  }
   }
 
 
